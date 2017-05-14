@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ideas Library</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3 text-center>Search for ideas by category</h3>
+  <ion-list>
+    <button
+      ion-item
+      *ngFor="let ideaGroup of ideaCollection"
+      [navPush]="ideasPage"
+      [navParams]="ideaGroup">
+      <ion-icon [name]="ideaGroup.icon" item-left></ion-icon>
+      <h2>{{ ideaGroup.category }}</h2>
+      <p>{{ ideaGroup.ideas.length }} ideas</p>
+    </button>
+  </ion-list>
+</ion-content>

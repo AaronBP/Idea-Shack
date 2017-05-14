@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ ideaGroup.category }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let idea of ideaGroup.ideas; let i = index">
+    <ion-card-content>
+      <p>{{ idea.text }}</p>
+      <p class="author">{{ idea.person }}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-right>
+        <button
+              ion-button
+              clear
+              small
+              (click)="onAddToFavourite(idea)"
+              *ngIf="!isFavourite(idea)">Favourite</button>
+        <button
+              ion-button
+              clear
+              small
+              color="danger"
+              (click)="onRemoveFromFavourites(idea)"
+              *ngIf="isFavourite(idea)">Unfavourite</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

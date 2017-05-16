@@ -9,7 +9,6 @@ import { Favourites } from '../pages/favourites/favourites';
 import { Library } from '../pages/library/library';
 import { Ideas } from '../pages/ideas/ideas';
 import { Idea } from '../pages/idea/idea';
-import { Settings } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { IdeasService } from "../services/ideas";
 import { SettingsService } from "../services/settings";
@@ -21,7 +20,6 @@ import { SettingsService } from "../services/settings";
     Library,
     Ideas,
     Idea,
-    Settings,
     TabsPage
   ],
   imports: [
@@ -35,7 +33,6 @@ import { SettingsService } from "../services/settings";
     Library,
     Ideas,
     Idea,
-    Settings,
     TabsPage
   ],
   providers: [
